@@ -1,20 +1,23 @@
 fn main() {
-    for i in 1..101 {
-        if i % 3 == 0 && i % 5 == 0 {
-            println!("FizzBuzz");
-            continue;
-        }
+    let mut printed = 0;
 
+    for i in 1..101 {
         if i % 3 == 0 {
-            println!("Fizz");
-            continue;
+            print!("Fizz");
+            printed = 1;
         }
 
         if i % 5 == 0 {
-            println!("Buzz");
-            continue;
+            print!("Buzz");
+            printed = 1;
         }
 
-        println!("{}", i);
+        if printed == 0 {
+            println!("{}", i);
+        }
+
+        println!();
+
+        printed = 0;
     }
 }
