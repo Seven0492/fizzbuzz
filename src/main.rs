@@ -13,7 +13,7 @@ fn main() {
         }
 
         if printed == 0 {
-            println!("{}", i);
+            print!("{}", i);
         }
 
         println!();
